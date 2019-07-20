@@ -1,0 +1,18 @@
+<h1>To do List</h1>
+
+<div class="input-form">
+  <label for="task">Create new task:</label>
+  <input [(ngModel)]="newTaskTitle" type="text" id="task">
+  <button (click)="createTask()">Create Task</button>
+</div>
+
+<!--
+[(ngModel)] = two way data binding, modifica modelo y la vista.
+[ngModel] = one way data binding, modifica la vista. 
+-->
+<div class="task-list-wrapper">
+  <ul class="task-list">
+    <li *ngFor="let task of taskList">{{ task.title }}</li>
+  </ul>
+</div>
+<!-- <router-outlet></router-outlet> -->
